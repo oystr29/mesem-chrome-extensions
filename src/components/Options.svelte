@@ -1,64 +1,65 @@
 <script lang="ts">
-    import type { IStorage } from "../types";
+  import { smileIndex, smiles } from "../data/store";
+  import { copy } from "svelte-copy";
+  import type { IStorage } from "../types";
+  import "../index.css";
+  import Sidebar from "./Sidebar.svelte";
 
-    export let count: number;
-    let successMessage: string = null;
+  export let count: number;
+  let successMessage: string = null;
 
-    function increment() {
-        count += 1;
-    }
+  function increment() {
+    count += 1;
+  }
 
-    function decrement() {
-        count -= 1;
-    }
+  function decrement() {
+    count -= 1;
+  }
 
-    function save() {
-        const storage: IStorage = {
-            count,
-        };
+  function save() {
+    const storage: IStorage = {
+      count,
+    };
 
-        chrome.storage.sync.set(storage, () => {
-            successMessage = "Options saved!";
+    chrome.storage.sync.set(storage, () => {
+      successMessage = "Options saved!";
 
-            setTimeout(() => {
-                successMessage = null;
-            }, 1500);
-        });
-    }
+      setTimeout(() => {
+        successMessage = null;
+      }, 1500);
+    });
+  }
 </script>
 
-<style>
-    .container {
-        min-width: 250px;
-    }
-
-    button {
-        border-radius: 2px;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-        background-color: #2ecc71;
-        color: #ecf0f1;
-        transition: background-color 0.3s;
-        padding: 5px 10px;
-        border: none;
-    }
-
-    button:hover,
-    button:focus {
-        background-color: #27ae60;
-    }
-
-    .success {
-        color: #2ecc71;
-        font-weight: bold;
-    }
-</style>
-
-<div class="container">
-    <p>Current count: <b>{count}</b></p>
+<!-- <div class="container">
+    <p class="text-red-500">Current Makan: <b>{count}</b></p>
     <div>
         <button on:click={decrement}>-</button>
         <button on:click={increment}>+</button>
         <button on:click={save}>Save</button>
         {#if successMessage}<span class="success">{successMessage}</span>{/if}
     </div>
+</div> -->
+
+<div class="min-w-[600px] min-h-[600px]">
+  <Sidebar />
+  <div class="flex bg-zinc-50">
+    <div class="ml-20 p-5 w-full">
+      {#each smiles as smile, i}
+        {#if $smileIndex === i}
+          <h2 class="text-xl font-semibold mb-5">{smile.label}</h2>
+          <div class="grid grid-cols-4 gap-5 my-2">
+            {#each smile.data as data}
+              <button
+                use:copy={data}
+                class="p-2 w-full bg-white rounded-none text-lg shadow"
+              >
+                {data}
+              </button>
+            {/each}
+          </div>
+        {/if}
+      {/each}
+    </div>
+  </div>
 </div>
