@@ -1,6 +1,8 @@
 import { writable } from "svelte/store";
 
-export let smileIndex = writable(0);
+export const smileIndex = writable(0);
+
+export const alert = writable("")
 
 import {
   bahu,
