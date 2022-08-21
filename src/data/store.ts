@@ -2,7 +2,7 @@ import { writable } from "svelte/store";
 
 // Recent Storage
 const recentStorage = localStorage.getItem("recentStorage");
-export const recents = writable<Array<string>>(JSON.parse(recentStorage));
+export const recents = writable<Array<string>>(JSON.parse(recentStorage) || []);
 recents.subscribe((value) => {
   console.log(value);
   localStorage.setItem("recentStorage", JSON.stringify(value));
