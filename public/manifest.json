@@ -1,6 +1,6 @@
 {
-    "name": "Mesem",
-    "description": "Gboard-Smiles Clone",
+    "name": "mesem",
+    "description": "Gboard-Smiles Clone. This extension will help you to express what your feeling right now",
     "version": "1.0",
     "manifest_version": 3,
     "icons": {

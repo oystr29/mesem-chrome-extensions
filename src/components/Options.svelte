@@ -37,7 +37,7 @@
               on:svelte-copy={(event) => ($alerts = event.detail)}
               on:svelte-copy={onCopy}
               use:copy={data}
-              class="p-2 w-full whitespace-normal bg-white rounded-none text-xs shadow"
+              class="btn-grid"
             >
               {data}
             </button>
@@ -53,7 +53,7 @@
                   on:svelte-copy={(event) => ($alerts = event.detail)}
                   on:svelte-copy={onCopy}
                   use:copy={data}
-                  class="p-2 w-full whitespace-normal bg-white rounded-none text-xs shadow"
+                  class="btn-grid"
                 >
                   {data}
                 </button>

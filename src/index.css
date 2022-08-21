@@ -22,6 +22,10 @@
     @apply after:absolute after:top-1/2 after:right-full after:-mt-[5px] after:border-[5px] after:border-transparent after:border-r-slate-900 after:border-solid
   }
 
+  .btn-grid {
+    @apply p-2 w-full whitespace-normal bg-white rounded-none text-xs shadow active:bg-slate-50
+  }
+
 
 
 }
