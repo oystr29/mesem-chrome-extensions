@@ -12,7 +12,7 @@
       return;
     }
     if (temp.includes(element)) {
-      temp.splice(temp.indexOf(element));
+      temp.splice(temp.indexOf(element), 1);
       temp.unshift(element);
     } else if (temp.length === 32) {
       temp.pop();
@@ -21,20 +21,8 @@
       temp.unshift(element);
     }
     $recents = temp;
-
   };
-
 </script>
-
-<!-- <div class="container">
-    <p class="text-red-500">Current Makan: <b>{count}</b></p>
-    <div>
-        <button on:click={decrement}>-</button>
-        <button on:click={increment}>+</button>
-        <button on:click={save}>Save</button>
-        {#if successMessage}<span class="success">{successMessage}</span>{/if}
-    </div>
-</div> -->
 
 <div class="min-w-[600px] min-h-[600px]">
   <Alert />
@@ -47,6 +35,7 @@
           {#each $recents as data}
             <button
               on:svelte-copy={(event) => ($alerts = event.detail)}
+              on:svelte-copy={onCopy}
               use:copy={data}
               class="p-2 w-full whitespace-normal bg-white rounded-none text-xs shadow"
             >
