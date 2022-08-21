@@ -16,7 +16,12 @@
   }
 
   .tooltip {
-    @apply absolute w-auto  left-20 p-2 min-w-max z-20 rounded-md shadow-md text-white bg-gray-900 text-xs scale-0 font-bold transition-all duration-100 origin-left
+    @apply absolute w-auto left-20 p-2 min-w-max z-20 rounded-md shadow-md text-white bg-gray-900 text-xs scale-0 font-bold transition-all duration-100 origin-top -translate-y-2
   }
+  .tooltip {
+    @apply after:absolute after:top-1/2 after:right-full after:-mt-[5px] after:border-[5px] after:border-transparent after:border-r-slate-900 after:border-solid
+  }
+
+
 
 }
