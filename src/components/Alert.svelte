@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onDestroy } from "svelte";
-  import { alert } from "../data/store";
+  import { alerts } from "../data/store";
   import { fly } from "svelte/transition";
 
   export let ms = 2000;
@@ -17,7 +17,7 @@
       if (ms > 0) timeout = setTimeout(() => (visible = false), ms); // and hide it after ms milliseconds
     }
   };
-  $: onMessageChange($alert, ms); // whenever the alert store or the ms props changes run onMessageChange
+  $: onMessageChange($alerts, ms); // whenever the alert store or the ms props changes run onMessageChange
 
   onDestroy(() => clearTimeout(timeout)); // make sure we clean-up the timeout
 </script>
@@ -29,7 +29,7 @@
     on:click={() => (visible = false)}
     transition:fly={{ delay: 250, duration: 300, x: 0, y: -100, opacity: 0.5 }}
   >
-  <span class="flex rounded-full bg-sky-500 uppercase px-2 py-1 text-xs font-bold mr-3">{$alert}</span>
+  <span class="flex rounded-full bg-sky-500 uppercase px-2 py-1 text-xs font-bold mr-3">{$alerts}</span>
   <span class="font-semibold mr-2 text-left flex-auto">Udah Dicopy</span>
   </div>
 {/if}

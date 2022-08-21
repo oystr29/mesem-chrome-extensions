@@ -1,8 +1,21 @@
 import { writable } from "svelte/store";
 
-export const smileIndex = writable(0);
+// Recent Storage
+const recentStorage = localStorage.getItem("recentStorage");
+export const recents = writable<Array<string>>(JSON.parse(recentStorage));
+recents.subscribe((value) => {
+  console.log(value);
+  localStorage.setItem("recentStorage", JSON.stringify(value));
+});
 
-export const alert = writable("")
+// TabIndex
+const currIndex = localStorage.getItem("currIndex");
+export const smileIndex = writable<number>(Number(currIndex) || 0);
+smileIndex.subscribe((value) =>
+  localStorage.setItem("currIndex", String(value))
+);
+
+export const alerts = writable("");
 
 import {
   bahu,

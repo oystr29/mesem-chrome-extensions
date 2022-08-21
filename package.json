@@ -2,6 +2,7 @@
     "name": "chrome-extension-svelte-typescript-boilerplate",
     "version": "2.0.0",
     "type": "module",
+    "license": "MIT",
     "repository": {
         "type": "git",
         "url": "https://github.com/nekitcorp/chrome-extension-svelte-typescript-boilerplate.git"
@@ -25,5 +26,8 @@
         "tslib": "^2.4.0",
         "typescript": "^4.7.4",
         "vite": "^2.9.13"
+    },
+    "dependencies": {
+        "svelte-chrome-storage": "^0.1.8"
     }
 }

@@ -1,4 +1,4 @@
-import Options from "src/components/Options.svelte";
+import Options from "../../components/Options.svelte";
 import type { IStorage } from "src/types";
 
 function restoreOptions() {
