@@ -27,11 +27,11 @@
 <div class="min-w-[600px] min-h-[600px]">
   <Alert />
   <Sidebar />
-  <div class="flex bg-zinc-50">
+  <div class="flex bg-white">
     <div class="ml-20 p-5 w-full">
       {#if $smileIndex === 90}
         <h2 class="text-xl font-semibold mb-5">Recent</h2>
-        <div class="grid grid-cols-4 gap-5 my-2">
+        <div class="my-grid">
           {#each $recents as data}
             <button
               on:svelte-copy={(event) => ($alerts = event.detail)}
@@ -47,7 +47,7 @@
         {#each smiles as smile, i}
           {#if $smileIndex === i}
             <h2 class="text-xl font-semibold mb-5">{smile.label}</h2>
-            <div class="grid grid-cols-4 gap-5 my-2">
+            <div class="my-grid">
               {#each smile.data as data}
                 <button
                   on:svelte-copy={(event) => ($alerts = event.detail)}

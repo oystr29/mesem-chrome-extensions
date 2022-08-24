@@ -3,7 +3,7 @@
 
 </script>
 
-<aside class="w-20 top-0 h-600  pb-10 px-2 z-10 bg-whites shadow-lg fixed">
+<aside class="w-20 h-screen top-0 h-600  pb-10 px-2 z-10 bg-whites shadow-lg fixed">
   <div class="flex-col flex  ">
     <button
       class={`sidebar-button group ${

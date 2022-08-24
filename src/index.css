@@ -26,6 +26,9 @@
     @apply p-2 w-full whitespace-normal bg-white rounded-none text-xs shadow active:bg-slate-50
   }
 
+  .my-grid {
+    @apply grid grid-cols-4 xl:grid-cols-5 gap-5 my-2
+  }
 
 
 }
