@@ -8,6 +8,10 @@ recents.subscribe((value) => {
   localStorage.setItem("recentStorage", JSON.stringify(value));
 });
 
+// i18n
+export const copied = chrome.i18n.getMessage('copied');
+export const recent = chrome.i18n.getMessage('recent');
+
 // TabIndex
 const currIndex = localStorage.getItem("currIndex");
 export const smileIndex = writable<number>(Number(currIndex) || 0);
@@ -36,91 +40,91 @@ import {
 export const smiles = [
   {
     title: "(◠‿◕)",
-    label: "Smilling",
+    label: chrome.i18n.getMessage('smilling'),
     name: "smilling",
     color: "bg-orange-500",
     data: tersenyum,
   },
   {
     title: "(•ө•)♡",
-    label: "Love",
+    label: chrome.i18n.getMessage('love'),
     name: "love",
     color: "bg-red-500",
     data: cinta,
   },
   {
     title: "(^o^)",
-    label: "Hugging",
+    label: chrome.i18n.getMessage("hugging"),
     name: "hugging",
     color: "bg-lime-500",
     data: memeluk,
   },
   {
     title: "ᕙ~.~ᕗ",
-    label: "Flexing",
+    label: chrome.i18n.getMessage("flexing"),
     name: "flexing",
     color: "bg-yellow-700",
     data: otot,
   },
   {
     title: "(◕ᴥ◕)",
-    label: "Animals",
+    label: chrome.i18n.getMessage("animals"),
     name: "animals",
     color: "bg-green-500",
     data: hewan,
   },
   {
     title: "(>0<)",
-    label: "Suprise",
+    label: chrome.i18n.getMessage("suprise"),
     name: "suprise",
     color: "bg-blue-500",
     data: terkejut,
   },
   {
     title: "♪\\^ω^\\",
-    label: "Dancing",
+    label: chrome.i18n.getMessage("dancing"),
     name: "dancing",
     color: "bg-fuchsia-500",
     data: menari,
   },
   {
     title: "乁•_•ㄏ",
-    label: "Shruggie",
+    label: chrome.i18n.getMessage("shruggie"),
     name: "shruggie",
     color: "bg-neutral-500",
     data: bahu,
   },
   {
     title: "┻━┻",
-    label: "Table Flip",
+    label: chrome.i18n.getMessage("table_flip"),
     name: "table-flip",
     color: "bg-rose-500",
     data: meja,
   },
   {
     title: "ತ_ʖತ",
-    label: "Look of Disapproving",
+    label: chrome.i18n.getMessage("look_disapproving"),
     name: "look-disapproving",
     color: "bg-purple-500",
     data: beda,
   },
   {
     title: "(⚈̥̥̥̥̥́⌢⚈̥̥̥̥̥̀)",
-    label: "Crying",
+    label: chrome.i18n.getMessage("crying"),
     name: "crying",
     color: "bg-cyan-500",
     data: menangis,
   },
   {
     title: "(⊙_◎)",
-    label: "Nervous",
+    label: chrome.i18n.getMessage("nervous"),
     name: "nervous",
     color: "bg-amber-600",
     data: gugup,
   },
   {
     title: "☞￣ᴥ￣☞",
-    label: "Pointers",
+    label: chrome.i18n.getMessage("pointers"),
     name: "pointers",
     color: "bg-slate-800",
     data: penunjuk,

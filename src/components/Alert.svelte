@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onDestroy } from "svelte";
-  import { alerts } from "../data/store";
+  import { alerts, copied } from "../data/store";
   import { fly } from "svelte/transition";
 
   export let ms = 2000;
@@ -30,6 +30,6 @@
     transition:fly={{ delay: 250, duration: 300, x: 0, y: -100, opacity: 0.5 }}
   >
   <span class="flex rounded-full bg-sky-500 uppercase px-2 py-1 text-xs font-bold mr-3">{$alerts}</span>
-  <span class="font-semibold mr-2 text-left flex-auto">Udah Dicopy</span>
+  <span class="font-semibold mr-2 text-left flex-auto">{copied}</span>
   </div>
 {/if}

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { smileIndex, smiles } from "../data/store";
+  import { smileIndex, smiles, recent } from "../data/store";
 
 </script>
 
@@ -16,7 +16,7 @@
       }}
     >
       ⏲
-      <span class="tooltip group-hover:scale-100">Recent</span>
+      <span class="tooltip group-hover:scale-100">{recent}</span>
     </button>
     {#each smiles as smile, i}
       <button

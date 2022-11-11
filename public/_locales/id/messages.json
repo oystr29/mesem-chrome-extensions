@@ -1,0 +1,62 @@
+{
+  "recent": {
+    "message": "Terbaru",
+    "description": "Judul Untuk Terbaru "
+  },
+  "smilling": {
+    "message": "Tersenyum",
+    "description": "Judul Untuk Tersenyum "
+  },
+  "love": {
+    "message": "Cinta",
+    "description": "Judul Untuk Cinta"
+  },
+  "hugging": {
+    "message": "Memeluk",
+    "description": "Judul Untuk Memeluk"
+  },
+  "flexing": {
+    "message": "Pamer Otot",
+    "description": "Judul Untuk Pamer Otot"
+  },
+  "animals": {
+    "message": "Hewan",
+    "description": "Judul Untuk Hewan"
+  },
+  "suprise": {
+    "message": "Kaget",
+    "description": "Judul Untuk Kaget"
+  },
+  "dancing": {
+    "message": "Menari",
+    "description": "Judul Untuk Menari"
+  },
+  "shruggie": {
+    "message": "Mengangkat Bahu",
+    "description": "Judul Untuk Mengangkat Bahu"
+  },
+  "table_flip": {
+    "message": "Membalikkan Meja",
+    "description": "Judul Untuk Membalikkan Meja"
+  },
+  "look_disapproving": {
+    "message": "Wajah Tidak Setuju",
+    "description": "Judul Untuk Wajah Tidak Setuju"
+  },
+  "crying": {
+    "message": "Menangis",
+    "description": "Judul Untuk Menangis"
+  },
+  "nervous": {
+    "message": "Gugup",
+    "description": "Judul Untuk Gugup"
+  },
+  "pointers": {
+    "message": "Penunjuk",
+    "description": "Judul Untuk Penunjuk"
+  },
+  "copied": {
+    "message": "udah dicopy",
+    "description": "Deskripsi untuk item yang udah dicopy"
+  }
+}
