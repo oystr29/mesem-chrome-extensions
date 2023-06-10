@@ -1,38 +1,33 @@
-# create-svelte
+## Mesem Chrome Extensions
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+![Gambar](/static/icons/mesem.png)
 
-## Creating a project
+Mesem is an emoticon picker for Chromium Browser. You can install it on Google Chrome, Microsoft Edge, and many more.
 
-If you're seeing this, you've probably already done this step. Congrats!
+Download it [here](https://chrome.google.com/webstore/detail/mesem/cnkmmjnmjcakpgpnfgipomoopgmghcih) (◍•ᴗ•◍)
+
+## Development
+
+This project use [Sveltekit](https://kit.svelte.dev/) which is a meta-framework for [Svelte](https://svelte.dev/).
+
+So, learn it first before you make a contributions.
+
+1. Clone this repository
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+git clone https://github.com/oktoala/mesem-chrome-extensions.git 
+cd mesem-chrome-extensions
 ```
 
-## Developing
+2. Install Dependencies
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+```bash
+npm i
+```
+
+3. Run the project
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
