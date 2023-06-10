@@ -22,14 +22,16 @@
 </script>
 
 <div class="my-grid mt-4">
-	{#each $recents as d}
-		<button
-			class="btn-grid"
-			on:svelte-copy={(event) => ($alerts = event.detail)}
-			on:svelte-copy={onCopy}
-			use:copy={d}
-		>
-			{@html d.replace(/\n/g, "<br />")}
-		</button>
-	{/each}
+	{#if $recents !== null}
+		{#each $recents as d}
+			<button
+				class="btn-grid"
+				on:svelte-copy={(event) => ($alerts = event.detail)}
+				on:svelte-copy={onCopy}
+				use:copy={d}
+			>
+				{@html d.replace(/\n/g, '<br />')}
+			</button>
+		{/each}
+	{/if}
 </div>

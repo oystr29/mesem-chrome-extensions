@@ -1,7 +1,8 @@
 export const prerender = true;
 
 export function load({ params }) {
-	return {
-		slug: params.slug
-	};
+  const slug = params.slug === 'index.html' ? null : params.slug;
+  return {
+    slug
+  };
 }

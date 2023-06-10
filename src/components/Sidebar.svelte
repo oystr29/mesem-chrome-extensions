@@ -1,6 +1,8 @@
 <script>
 	import { page } from '$app/stores';
-  
+	// @ts-ignore
+	import { tooltip } from '@svelte-plugins/tooltips';
+
 	const smilesTabs = [
 		{
 			title: '(◠‿◕)',

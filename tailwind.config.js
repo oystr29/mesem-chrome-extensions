@@ -4,11 +4,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        helvetica: ['Helvetica'],
         roboto: ["'Roboto'"],
       }
     },
   },
-  plugins: [require('tailwind-scrollbar'),],
+  plugins: [require('tailwind-scrollbar'), require('@tailwindcss/typography')],
 }
 

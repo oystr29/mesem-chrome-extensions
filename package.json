@@ -16,8 +16,10 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.28.1",
+    "@svelte-plugins/tooltips": "^0.1.6",
     "@sveltejs/adapter-auto": "^1.0.0-next.90",
     "@sveltejs/kit": "^1.0.0-next.587",
+    "@tailwindcss/typography": "^0.5.9",
     "@types/chrome": "^0.0.235",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "@typescript-eslint/parser": "^5.45.0",
