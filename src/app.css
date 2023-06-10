@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  @font-face {
+    font-family: 'Helvetica';
+    src: url('/fonst/Helvetica/HelveticaNeue-Roman.otf');
+  }
+
+  @font-face {
+    font-family: "'Roboto'";
+    src: url('/fonst/Roboto/Roboto-Regular.ttf');
+  }
+}
+
+@layer components {
+  .sidebar-button {
+    @apply whitespace-nowrap w-full text-[10px] justify-center inline-block text-center rounded-lg p-2 my-1
+  }
+
+  .sidebar-button.active {
+    @apply text-white font-bold
+  }
+
+  .sidebar-button.inactive {
+    @apply text-slate-400 hover:bg-slate-100
+  }
+
+  .tooltip {
+    @apply absolute w-auto left-20 p-2 min-w-max z-20 rounded-md shadow-md text-white bg-gray-900 text-xs scale-0 font-bold transition-all duration-100 origin-top -translate-y-2
+  }
+
+  .tooltip {
+    @apply after:absolute after:top-1/2 after:right-full after:-mt-[5px] after:border-[5px] after:border-transparent after:border-r-slate-900 after:border-solid
+  }
+
+  .btn-grid {
+    @apply p-2 w-full rounded-none font-roboto flex items-center justify-center text-xs shadow active:bg-slate-50
+  }
+
+  .my-grid {
+    @apply grid grid-cols-4 xl:grid-cols-5 gap-5 my-2
+  }
+
+  .test {
+    @apply bg-lime-700
+  }
+
+
+}
+
+/* .btn-grid {
+	font-family: 'Roboto', sans-serif !important;
+} */
