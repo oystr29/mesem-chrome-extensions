@@ -20,7 +20,7 @@
   }
 
   .sidebar-button.inactive {
-    @apply text-slate-400 hover:bg-slate-100
+    @apply text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900
   }
 
   .tooltip {
@@ -36,7 +36,7 @@
   }
 
   .btn-grid {
-    @apply p-2 w-full rounded-none font-roboto flex items-center justify-center text-xs shadow active:bg-slate-50
+    @apply py-2 px-2.5 w-full hover:scale-105 transition hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg font-roboto flex items-center justify-center text-xs shadow bg-white dark:bg-gray-800 active:bg-slate-50 dark:active:bg-gray-950
   }
 
   .my-grid {

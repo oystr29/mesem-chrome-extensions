@@ -21,7 +21,7 @@
 	};
 </script>
 
-<div class="my-grid mt-4">
+<div class="my-grid">
 	{#if $recents !== null}
 		{#each $recents as d}
 			<button

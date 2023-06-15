@@ -59,6 +59,10 @@
     "message": "Penunjuk",
     "description": "Judul Untuk Penunjuk"
   },
+  "humans": {
+    "message": "Orang",
+    "description": "Title for Human Tab"
+  },
   "copied": {
     "message": "udah dicopy",
     "description": "Deskripsi untuk item yang udah dicopy"

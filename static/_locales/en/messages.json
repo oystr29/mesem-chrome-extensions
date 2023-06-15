@@ -59,6 +59,10 @@
     "message": "Pointers",
     "description": "Title for Pointers Tab"
   },
+  "humans": {
+    "message": "Human",
+    "description": "Title for Human Tab"
+  },
   "copied": {
     "message": "has been copied",
     "description": "Desc for item that has been copied"
