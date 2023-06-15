@@ -24,11 +24,28 @@ type Mesem = {
 	data: string[];
 };
 
+// Dark Mode
+if (browser) {
+	if (
+		localStorage.theme === 'dark' ||
+		(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+	) {
+		document.documentElement.classList.add('dark');
+	} else {
+		document.documentElement.classList.remove('dark');
+	}
+}
 // Recent Storage
 export const recents = writable(browser && JSON.parse(`${localStorage.getItem('recentStorage')}`));
 
 recents.subscribe((value) => {
 	if (browser) localStorage.setItem('recentStorage', JSON.stringify(value));
+});
+
+export const mode = writable(browser ? localStorage.getItem('mode') : 'light');
+
+mode.subscribe((value) => {
+	if (browser) localStorage.setItem('mode', `${value}`);
 });
 
 export const lastTab = writable(browser && JSON.parse(`${localStorage.getItem('lastTab')}`));
