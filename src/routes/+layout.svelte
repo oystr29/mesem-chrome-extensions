@@ -3,7 +3,7 @@
 	// @ts-ignore
 	import { tooltip } from '@svelte-plugins/tooltips';
 	import '@fontsource/roboto';
-  import TrtIcon from '../../static/trbtn-icon.png'
+	import TrtIcon from '../../static/trbtn-icon.png';
 	import type { PageData } from './$types';
 	import '../app.css';
 	import Alert from '../components/Alert.svelte';
@@ -13,6 +13,7 @@
 	import SunIcon from '../components/icons/SunIcon.svelte';
 	import { browser } from '$app/environment';
 	import MoonIcon from '../components/icons/MoonIcon.svelte';
+	import TracteerIcon from '../components/icons/TracteerIcon.svelte';
 
 	let darkMode = false;
 
@@ -36,10 +37,7 @@
 	}
 
 	export let data: PageData;
-
 </script>
-
-
 
 <div class="min-w-[600px] roboto">
 	<Alert />
@@ -87,9 +85,22 @@
 							<SunIcon />
 						{/if}
 					</button>
-          <a target="_blank" rel="noopener noreferrer" href="https://trakteer.id/oktavian_yoga/tip" class="h-6 ml-3">
-            <img class="h-6" src={TrtIcon} alt="Traktir Icon" />
-          </a>
+					<a
+						use:tooltip={{
+							arrow: false,
+							content: 'Donasi',
+							position: 'bottom',
+							autoposition: true,
+							align: 'center',
+							animation: 'fade'
+						}}
+						target="_blank"
+						rel="noopener noreferrer"
+						href="https://trakteer.id/oktavian_yoga/tip"
+						class="h-6 ml-3"
+					>
+            <TracteerIcon />
+					</a>
 				</div>
 			</div>
 			<div class="min-h-screen mx-5 h-auto">
